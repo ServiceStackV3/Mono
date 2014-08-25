@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8F9A08B-E704-4C77-939B-B56670A2A98D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceStack.Hello</RootNamespace>
+    <AssemblyName>ServiceStack.Hello</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\ServiceStack\src\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServiceStack">
+      <HintPath>packages\ServiceStack.4.0.31\lib\net40\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>packages\ServiceStack.Client.4.0.31\lib\net40\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>packages\ServiceStack.Common.4.0.31\lib\net40\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>packages\ServiceStack.Interfaces.4.0.31\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>packages\ServiceStack.Text.4.0.31\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="100k-downloads\100k-feedback-twitter.png" />
+    <Content Include="100k-downloads\100k-nuget-large.png" />
+    <Content Include="100k-downloads\100k-nuget-summary.png" />
+    <Content Include="100k-downloads\100k-nuget.png" />
+    <Content Include="100k-downloads\100k-pluralsight-large.png" />
+    <Content Include="100k-downloads\100k-pluralsight.png" />
+    <Content Include="100k-downloads\100k-redis-uptime.png" />
+    <Content Include="100k-downloads\100k-stackoverflow.png" />
+    <Content Include="100k-downloads\backboneconf-logo.png" />
+    <Content Include="100k-downloads\default.htm" />
+    <Content Include="100k-downloads\jabber-activity-highlight.png" />
+    <Content Include="100k-downloads\jabber-activity.png" />
+    <Content Include="100k-downloads\nt.jpg" />
+    <Content Include="100k-downloads\nuget-229x64.png" />
+    <Content Include="100k-downloads\stackoverflow-logo.png" />
+    <Content Include="100k-downloads\weatheredoak-logo.png" />
+    <Content Include="2012-report\default.htm" />
+    <Content Include="2012-report\highcharts.js" />
+    <Content Include="2012-report\jquery-1.7.js" />
+    <Content Include="2013-report\default.htm" />
+    <Content Include="2013-report\highcharts.js" />
+    <Content Include="2013-report\jquery-1.7.js" />
+    <Content Include="about.htm" />
+    <Content Include="benchmarks\default.css" />
+    <Content Include="benchmarks\default.htm" />
+    <Content Include="benchmarks\js\adapters\mootools-adapter.js" />
+    <Content Include="benchmarks\js\adapters\mootools-adapter.src.js" />
+    <Content Include="benchmarks\js\adapters\prototype-adapter.js" />
+    <Content Include="benchmarks\js\adapters\prototype-adapter.src.js" />
+    <Content Include="benchmarks\js\highcharts.js" />
+    <Content Include="benchmarks\js\highcharts.src.js" />
+    <Content Include="benchmarks\js\jquery-1.7.js" />
+    <Content Include="benchmarks\js\modules\exporting.js" />
+    <Content Include="benchmarks\js\modules\exporting.src.js" />
+    <Content Include="benchmarks\js\themes\dark-blue.js" />
+    <Content Include="benchmarks\js\themes\dark-green.js" />
+    <Content Include="benchmarks\js\themes\gray.js" />
+    <Content Include="benchmarks\js\themes\grid.js" />
+    <Content Include="benchmarks\NorthwindDatabaseRowsSerialization.1000-times.2012-01-27.html" />
+    <Content Include="benchmarks\NorthwindDatabaseRowsSerialization.100000-times.2010-08-17.html" />
+    <Content Include="benchmarks\NorthwindDatabaseRowsSerialization.100000-times.2012-02-03.html" />
+    <Content Include="benchmarks\NorthwindDatabaseRowsSerialization.1000000-times.2010-02-06.html" />
+    <Content Include="benchmarks\NorthwindDatabaseTablesSerialization.10000-times.2010-02-06.html" />
+    <Content Include="bg-body-1024.png" />
+    <Content Include="bg-body-large.png" />
+    <Content Include="bg-body.png" />
+    <Content Include="btn-download.gif" />
+    <Content Include="btn-github.png" />
+    <Content Include="btn-googlecode.png" />
+    <Content Include="btn-subcomponent.png" />
+    <Content Include="clientaccesspolicy.xml" />
+    <Content Include="conf\nginx-mono-fastcgi.txt" />
+    <Content Include="Content\Css\default.css" />
+    <Content Include="crossdomain.xml" />
+    <Content Include="default.css" />
+    <Content Include="default.htm">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="detailed-overview.png" />
+    <Content Include="excel16x16.gif" />
+    <Content Include="favicon.bmp" />
+    <Content Include="favicon.ico" />
+    <Content Include="files\All-DarkPastel-2011-05.vssettings" />
+    <Content Include="files\auth-overview.png" />
+    <Content Include="files\bg-batman.jpg" />
+    <Content Include="files\bg-whitehouse.jpg" />
+    <Content Include="files\BundlerRunOnSave.png" />
+    <Content Include="files\dans-benchmarks.png" />
+    <Content Include="files\dans-benchmarks_v335.png" />
+    <Content Include="files\dapper-benchmarks.png" />
+    <Content Include="files\DarkPastel-2011-05.vssettings" />
+    <Content Include="files\darkpastel-screenshot-02.png" />
+    <Content Include="files\darkpastel-screenshot-03.png" />
+    <Content Include="files\darkpastel-screenshot.png" />
+    <Content Include="files\dart-raytracer.png" />
+    <Content Include="files\messaging.htm" />
+    <Content Include="files\miniprofiler-hello.png" />
+    <Content Include="files\miniprofiler-simpledb-n1-sql.png" />
+    <Content Include="files\miniprofiler-simpledb-n1.png" />
+    <Content Include="files\miniprofiler-simpledb.png" />
+    <Content Include="files\openid-form.png" />
+    <Content Include="files\ormlite-api.png" />
+    <Content Include="files\ormlite-example.png" />
+    <Content Include="files\robots-shard0.png" />
+    <Content Include="files\rockstars-01.png" />
+    <Content Include="files\rockstars-02.png" />
+    <Content Include="files\rockstars-03.png" />
+    <Content Include="files\rockstars-04.png" />
+    <Content Include="files\rockstars-05.png" />
+    <Content Include="files\serialization-benchmarks.png" />
+    <Content Include="files\servicestack-architecture-tree.png" />
+    <Content Include="files\servicestack-httpclients.png" />
+    <Content Include="files\servicestack-logical-view-01.png" />
+    <Content Include="files\servicestack-logical-view-02.png" />
+    <Content Include="files\servicestack-logical-view-03.png" />
+    <Content Include="files\servicestack-mqclients.png" />
+    <Content Include="files\servicestack-overview-01.png" />
+    <Content Include="files\servicestack-overview-02.png" />
+    <Content Include="files\servicestack-overview-export-01.PNG" />
+    <Content Include="files\servicestack-overview-export-02.PNG" />
+    <Content Include="files\slide-29.png" />
+    <Content Include="files\slide-30.png" />
+    <Content Include="files\slide-31.png" />
+    <Content Include="files\slide-34.png" />
+    <Content Include="files\slide-35.png" />
+    <Content Include="files\slide-60.png" />
+    <Content Include="files\slides-crossplatform.png" />
+    <Content Include="gitstatus-stats.png" />
+    <Content Include="gitstatus.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Images\bg-body-1024.png" />
+    <Content Include="Content\Images\btn-github.png" />
+    <Content Include="Content\Images\MetadataIndex.png" />
+    <Content Include="Content\Images\Mono-powered-big.png" />
+    <Content Include="Content\Images\NewProject.png" />
+    <Content Include="icon-home-eee.jpg" />
+    <Content Include="icon-home.jpg" />
+    <Content Include="img\AuthorService\html-view.png" />
+    <Content Include="img\AuthorService\html.png" />
+    <Content Include="img\AuthorService\json.png" />
+    <Content Include="img\AuthorService\metadata.png" />
+    <Content Include="img\AuthorService\mini-profiler-sql.png" />
+    <Content Include="img\AuthorService\mini-profiler.png" />
+    <Content Include="img\AuthorService\xml.png" />
+    <Content Include="img\bootstrap-api-01-850.png" />
+    <Content Include="img\bootstrap-api-01.png" />
+    <Content Include="img\bootstrap-api-02-850.png" />
+    <Content Include="img\bootstrap-api-02.png" />
+    <Content Include="img\brada-speed.png" />
+    <Content Include="img\customer-dto.png" />
+    <Content Include="img\customer-form-html-after-02.png" />
+    <Content Include="img\customer-form-html-after-03.png" />
+    <Content Include="img\customer-form-html-after-04.png" />
+    <Content Include="img\customer-form-html-after.png" />
+    <Content Include="img\customer-form-html.png" />
+    <Content Include="img\customer-form.png" />
+    <Content Include="img\customer-integration-test.png" />
+    <Content Include="img\customer-post.png" />
+    <Content Include="img\customer-put-and-delete.png" />
+    <Content Include="img\customer-service.png" />
+    <Content Include="img\external-tools-bundler.png" />
+    <Content Include="img\fredwilson-speed.png" />
+    <Content Include="img\funq-benchmarks.png" />
+    <Content Include="img\HTML5Format.png" />
+    <Content Include="img\newproject.png" />
+    <Content Include="img\nuget-bundler.png" />
+    <Content Include="img\nuget-servicestack.client.silverlight.png" />
+    <Content Include="img\nuget-servicestack.host.aspnet.png" />
+    <Content Include="img\nuget-servicestack.host.mvc.png" />
+    <Content Include="img\nuget-servicestack.ormlite.firebird.png" />
+    <Content Include="img\nuget-servicestack.ormlite.mysql.png" />
+    <Content Include="img\nuget-servicestack.ormlite.sqlite32.png" />
+    <Content Include="img\nuget-servicestack.ormlite.sqlite64.png" />
+    <Content Include="img\nuget-servicestack.ormlite.sqlserver.png" />
+    <Content Include="img\nuget-servicestack.png" />
+    <Content Include="img\nuget-servicestack.razor.png" />
+    <Content Include="img\nuget-servicestack.redis.png" />
+    <Content Include="img\nuget-servicestack.text.png" />
+    <Content Include="img\post-build-bundler.png" />
+    <Content Include="img\razorrockstarspreview-02.png" />
+    <Content Include="img\razorrockstarspreview.png" />
+    <Content Include="img\Redis-annotated-preview.png" />
+    <Content Include="img\Redis-annotated.png" />
+    <Content Include="img\redisadmin-01.png" />
+    <Content Include="img\redisadmin-02.png" />
+    <Content Include="img\request-logs-01-850.png" />
+    <Content Include="img\request-logs-01.png" />
+    <Content Include="img\request-logs-02.png" />
+    <Content Include="img\restinfo-apphost.png" />
+    <Content Include="img\restintro-test-01.png" />
+    <Content Include="img\rockstars-01.png" />
+    <Content Include="img\screenshot.png" />
+    <Content Include="img\serializers-benchmarks.png" />
+    <Content Include="img\servicestack-vs-webapi-full.png" />
+    <Content Include="img\servicestack-vs-webapi.png" />
+    <Content Include="img\slides-01-overview-04.png" />
+    <Content Include="img\slides-01-overview-300.png" />
+    <Content Include="img\slides-01-overview.png" />
+    <Content Include="img\slides-02-create-rest-service-300.png" />
+    <Content Include="img\slides-02-create-rest-service.png" />
+    <Content Include="img\slides-overview-04.png" />
+    <Content Include="jquery-1.8.3.min.js" />
+    <Content Include="labs\deathtoie\default.htm" />
+    <Content Include="logo-100x100.png" />
+    <Content Include="logo-24x24.png" />
+    <Content Include="logo-32x32.png" />
+    <Content Include="logo-48x48.png" />
+    <Content Include="logo-64x64.png" />
+    <Content Include="logo-infoq.gif" />
+    <Content Include="logo-servicestack-demo.png" />
+    <Content Include="logo-servicestack-old.png" />
+    <Content Include="logo-servicestack-xmas.png" />
+    <Content Include="logo-servicestack.old.png" />
+    <Content Include="logo-servicestack.png" />
+    <Content Include="logo-txt-small.png" />
+    <Content Include="logo-xmas.png" />
+    <Content Include="logo.png" />
+    <Content Include="logos\default.htm" />
+    <Content Include="logos\inverse.htm" />
+    <Content Include="logos\ss-logo-bg-inverse.png" />
+    <Content Include="logos\ss-logo-bg.png" />
+    <Content Include="logos\ss-logo-inverse.png" />
+    <Content Include="logos\ss-logo-small-inverse.png" />
+    <Content Include="logos\ss-logo-small.png" />
+    <Content Include="logos\ss-logo.png" />
+    <Content Include="logos\ss-logos.png" />
+    <Content Include="mvc-powerpack\cache.png" />
+    <Content Include="mvc-powerpack\default.htm" />
+    <Content Include="mvc-powerpack\entityframework.png" />
+    <Content Include="mvc-powerpack\greatcode.jpg" />
+    <Content Include="mvc-powerpack\json100.png" />
+    <Content Include="mvc-powerpack\json160.gif" />
+    <Content Include="mvc-powerpack\restapi.png" />
+    <Content Include="mvc-powerpack\servicestack-powerpack.png" />
+    <Content Include="mvc-powerpack\webconfig.png" />
+    <Content Include="mvc-powerpack\xcode.png" />
+    <Content Include="overview.htm" />
+    <Content Include="page-metadata.png" />
+    <Content Include="per-core-pricing.png" />
+    <Content Include="per-dev-pricing.png" />
+    <Content Include="pluralsight-logo.png" />
+    <Content Include="pluralsight_250.png" />
+    <Content Include="pluralsight_ss_250.png" />
+    <Content Include="rip-ie6.jpg" />
+    <Content Include="runson-mono-net-small.png" />
+    <Content Include="runson-mono-net.png" />
+    <Content Include="ServiceStack.Hello.csproj.user" />
+    <Content Include="ServiceStack.Hello\default.htm" />
+    <Content Include="showcase\default.htm" />
+    <Content Include="showcase\img\1x1black-50a.png" />
+    <Content Include="showcase\img\ajaxclient-150.png" />
+    <Content Include="showcase\img\ajaxclient-400x350.png" />
+    <Content Include="showcase\img\ajaxclient.png" />
+    <Content Include="showcase\img\ajaxexample-400x350.png" />
+    <Content Include="showcase\img\ajaxexample.png" />
+    <Content Include="showcase\img\avatar.png" />
+    <Content Include="showcase\img\bg.png" />
+    <Content Include="showcase\img\bootsrap.png" />
+    <Content Include="showcase\img\bootstrapapi-150.png" />
+    <Content Include="showcase\img\bootstrapapi.png" />
+    <Content Include="showcase\img\doc-150.png" />
+    <Content Include="showcase\img\freelamusica-400x350.jpg" />
+    <Content Include="showcase\img\freelamusica-400x350.png" />
+    <Content Include="showcase\img\freelamusica.jpg" />
+    <Content Include="showcase\img\freelamusica.png" />
+    <Content Include="showcase\img\header-bg.png" />
+    <Content Include="showcase\img\hello-150.png" />
+    <Content Include="showcase\img\hello-400x350.png" />
+    <Content Include="showcase\img\hello.png" />
+    <Content Include="showcase\img\imageresizer-150.png" />
+    <Content Include="showcase\img\imageresizer-400x350.png" />
+    <Content Include="showcase\img\imageresizer.png" />
+    <Content Include="showcase\img\imageresizer2-150.png" />
+    <Content Include="showcase\img\imageresizer2-400x350.png" />
+    <Content Include="showcase\img\imageresizer2.png" />
+    <Content Include="showcase\img\mflow-400x350.jpg" />
+    <Content Include="showcase\img\mflow-400x350.png" />
+    <Content Include="showcase\img\mflow.jpg" />
+    <Content Include="showcase\img\mflow.png" />
+    <Content Include="showcase\img\mflowajaxdemo-400x350.png" />
+    <Content Include="showcase\img\mflowajaxdemo.png" />
+    <Content Include="showcase\img\mflowapp-400x350.jpg" />
+    <Content Include="showcase\img\mflowapp.jpg" />
+    <Content Include="showcase\img\movierest-150.png" />
+    <Content Include="showcase\img\movierest-400x350.png" />
+    <Content Include="showcase\img\movierest.png" />
+    <Content Include="showcase\img\northwind-150.png" />
+    <Content Include="showcase\img\northwind-400x350.png" />
+    <Content Include="showcase\img\northwind.png" />
+    <Content Include="showcase\img\redisadminui-150.png" />
+    <Content Include="showcase\img\redisadminui-400x350.png" />
+    <Content Include="showcase\img\redisadminui.png" />
+    <Content Include="showcase\img\redisstackoverflow-150.png" />
+    <Content Include="showcase\img\redisstackoverflow-400x350.png" />
+    <Content Include="showcase\img\redisstackoverflow.png" />
+    <Content Include="showcase\img\restfiles-150.png" />
+    <Content Include="showcase\img\restfiles-400x350.png" />
+    <Content Include="showcase\img\restfiles.png" />
+    <Content Include="showcase\img\rockstars-150.png" />
+    <Content Include="showcase\img\rockstars.png" />
+    <Content Include="showcase\img\silverlight-400x350.png" />
+    <Content Include="showcase\img\silverlight.png" />
+    <Content Include="showcase\img\soap12-400x350.png" />
+    <Content Include="showcase\img\soap12.png" />
+    <Content Include="showcase\img\todos-150.png" />
+    <Content Include="showcase\img\todos-400x350.png" />
+    <Content Include="showcase\img\todos.png" />
+    <Content Include="small-logo-ajaxstack.png" />
+    <Content Include="small-logo-servicestack.png" />
+    <Content Include="ss-overview-01.png" />
+    <Content Include="ss-overview-02.png" />
+    <Content Include="ss-overview-03.png" />
+    <Content Include="ss-overview.png" />
+    <Content Include="ssbox\Jplayer.swf" />
+    <Content Include="ssbox\jquery.jplayer.min.js" />
+    <Content Include="ssbox\raphael.js" />
+    <Content Include="ssbox\sounds\beep-digital.mp3" />
+    <Content Include="ssbox\sounds\beep-short.mp3" />
+    <Content Include="ssbox\sounds\drop-water.mp3" />
+    <Content Include="ssbox\sounds\futuristic-transition.mp3" />
+    <Content Include="ssbox\sounds\futuristic-transition2.mp3" />
+    <Content Include="ssbox\sounds\good-idea.mp3" />
+    <Content Include="ssbox\sounds\impact-cinematic.mp3" />
+    <Content Include="ssbox\sounds\impact-deep.mp3" />
+    <Content Include="ssbox\sounds\impact-deep2.mp3" />
+    <Content Include="ssbox\sounds\impact-epic.mp3" />
+    <Content Include="ssbox\sounds\impact-hollow-boom.mp3" />
+    <Content Include="ssbox\sounds\magic-cartoon.mp3" />
+    <Content Include="ssbox\sounds\magic-cartoon2.mp3" />
+    <Content Include="ssbox\sounds\magic-shimmer.mp3" />
+    <Content Include="ssbox\sounds\open-lock-deadbolt.mp3" />
+    <Content Include="ssbox\sounds\open-lock-deadbolt2.mp3" />
+    <Content Include="ssbox\sounds\open-lock.mp3" />
+    <Content Include="ssbox\sounds\shoosh-deep.mp3" />
+    <Content Include="ssbox\sounds\swhoosh-particle.mp3" />
+    <Content Include="ssbox\sounds\swish-quick.mp3" />
+    <Content Include="ssbox\sounds\swish-quick2.mp3" />
+    <Content Include="ssbox\sounds\swosh-hollow.mp3" />
+    <Content Include="ssbox\sounds\transition-wood-tap.mp3" />
+    <Content Include="ssbox\sounds\whoosh-soft.mp3" />
+    <Content Include="ssbox\ssbox.css" />
+    <Content Include="ssbox\ssbox.js" />
+    <Content Include="ssbox\ssbox.png" />
+    <Content Include="tbird.png" />
+    <Content Include="testreports\2011-03-05_RunReports-Windows.htm" />
+    <Content Include="testreports\2011-03-09_RunReports-Windows.htm" />
+    <Content Include="testreports\2011-03-15_RunReports-Linux.htm" />
+    <Content Include="testreports\2011-03-17_RunReports-Linux.htm" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="100k-downloads\.DS_Store" />
+    <Content Include="100k-downloads\100k-pluralsight.pdn" />
+    <Content Include="2012-report\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="conf\Release-Notes.md" />
+    <Content Include="conf\servicestack.conf" />
+    <Content Include="conf\ServiceStack.webapp" />
+    <Content Include="conf\StarterTemplates.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="files\.DS_Store" />
+    <Content Include="files\auth-mini-overview.odg" />
+    <Content Include="files\auth-overview.odg" />
+    <Content Include="files\servicestack-architecture-tree.pptx" />
+    <Content Include="files\servicestack-overview.pdf" />
+    <Content Include="files\servicestack-overview.pptx" />
+    <Content Include="files\WhatIsTheServiceStack.key" />
+    <Content Include="img\HTML5Format.pdn" />
+    <Content Include="img\razorrockstarspreview.pdn" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logos\.DS_Store" />
+    <Content Include="logos\ss-logos.pxm" />
+    <Content Include="mvc-powerpack\cpu_cache_structure.pdn" />
+    <Content Include="mvc-powerpack\servicestack-powerpack.pdn" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="architecture.odp" />
+    <Content Include="btn-github.pdn" />
+    <Content Include="btn-googlecode.pdn" />
+    <Content Include="btn-subcomponent.pdn" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo-txt-small-white.pdn" />
+    <Content Include="logo-txt-small.pdn" />
+    <Content Include="logo-xmas.pdn" />
+    <Content Include="servicestack-logo.pdn" />
+    <Content Include="ss-overview.pxm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\WebDeploy.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62577</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62577/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+</Project>

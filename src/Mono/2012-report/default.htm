@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ServiceStack's End of Days, end of 2012 Community Report</title>
+    <link rel="stylesheet" type="text/css" href="../default.css" />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="jquery-1.7.js"></script>
+	<script type="text/javascript" src="highcharts.js"></script>
+
+	<style type="text/css">
+		#content {
+			margin:0;
+			padding:15px;
+			width: auto;
+		}
+		#content a
+		{
+			color: #205AAF !important;
+		}
+		#content h3 {
+			color: #666;
+			margin: 10px 0 0 0;
+			padding: 10px 0;
+		}
+		H2 {
+			margin: 5px 0;
+		}
+		H4 {
+			color: #205AAF;
+		}
+		img {
+			margin:0;
+			padding:0;
+			vertical-align: bottom;
+		}
+		img[align=left] {
+			padding: 0 10px 0 0;
+		}
+		#feature {
+			padding: 0;
+		}
+		pre{margin:1em 0;font-size:12px;background-color:#eee;border:1px solid #ddd;padding:5px;line-height:1.5em;color:#444;overflow:auto;-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+		pre::-webkit-scrollbar{height:8px;width:8px;}
+		pre::-webkit-scrollbar-track-piece{margin-bottom:10px;background-color:#e5e5e5;border-bottom-left-radius:4px 4px;border-bottom-right-radius:4px 4px;border-top-left-radius:4px 4px;border-top-right-radius:4px 4px;}
+		pre::-webkit-scrollbar-thumb:vertical{height:25px;background-color:#ccc;-webkit-border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(255,255,255,1);}
+		pre::-webkit-scrollbar-thumb:horizontal{width:25px;background-color:#ccc;-webkit-border-radius:4px;}
+		pre code{padding:0!important;font-size:12px!important;background-color:#eee!important;border:none!important;}
+
+		kbd {
+			background-color:#eee;
+			padding: 1px 2px;
+		}
+		pre {
+			margin: 20px 40px;
+		}
+		acronym {
+			background-color:#f1f1f1;
+			border-bottom: 1px dotted #063;
+		}
+		small { 
+			color: #888;
+		}
+		.chart {
+			min-width: 500px; 
+			width: 800px; 
+			height: 400px; 
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body class="host">
+
+<div id="header">
+
+	<a href="https://servicestack.net" title="Open source Mono and .NET web service framework"><img src="../logo-servicestack.png" alt="Service Stack" /></a>
+	<h3 id="logo-title">The state of the Stack, 2012</h3>
+	<br/>
+</div>
+
+<div id="content">
+
+	<span class="summary">
+		As an Open Source project our primary goals are to broaden the reach of our software, grow our community and expand our knowledge-base. 
+		To measure the state of ServiceStack's ecosystem we've collected some stats to track our progress towards these goals.
+	</span>
+
+	<h2>ServiceStack's 21st Dec (End of Days), end of 2012 Community Report</h2>
+
+	<p>
+		At the start of 2012 we were still a fairly unknown option in .NET and were only 6 months into offering official releases on NuGet which were off to a relatively slow start. We started to see our first real momentum after publishing our initial <a href="http://mono.servicestack.net/benchmarks/">benchmarks</a> helping solidify our reputation as a performance-focused framework and from our first real exposure to a wide .NET audience with our <a href="http://www.hanselminutes.com/300/framework-series-service-stack-with-demis-bellot">January interview on hanselminutes</a> kickstarting an exciting year for ServiceStack...
+	</p>
+
+	<p>
+		Throughout the year we've made constant and significant technological progress in implementation and features with the release of our <a href="https://github.com/ServiceStack/ServiceStack/wiki/New-Api">New API</a> that was <a href="http://news.ycombinator.com/item?id=4564416">well-received on Hacker News</a> closely followed by our <a href="http://razor.servicestack.net/">Razor and HTML ViewEngine support</a> upgrading ServiceStack to a full-featured web framework capable of having the same service serving REST, Web, Mobile, SOAP and MQ clients. To improve message throughput at <a href="http://careers.stackoverflow.com/">StackOverflow Careers</a> we enhanced ServiceStack's MQ Support with a new <a href="https://github.com/ServiceStack/ServiceStack/wiki/Messaging-and-redis">multi-threaded Redis Mq Host</a> allowing different services to be parallelized and processed in the background. We also cut Careers build time in 1/2 by adopting <a href="https://github.com/ServiceStack/Bundler">ServiceStack's node.js-based Bundler</a> for all our js, css and less compilation and minification needs.
+	</p>
+
+	<h4>Mid year update</h4>
+	<p>
+		Our technical progress ensured by mid-2012 we had gained a lot of momentum by the time we published our <a href="http://mono.servicestack.net/100k-downloads/">first status report</a>. We've continued to grow rapidly since then and have collected many of the end-of-year statistics below to track how well we did in 2012.
+	</p>
+
+	<h4>Public coverage</h4>
+	<p>
+		2012 was also the debut of ServiceStack's first official presentation at a tech conference with <a href="https://twitter.com/demisbellot">@demisbellot's</a> first <a href="http://www.slideshare.net/newmovie/what-istheservicestack-14819151">What is the ServiceStack</a> intro talk at <a href="http://monkeyspace.org">monkeyspace.org</a> in October. The year continued to host a number of other talks performed around the globe by other ServiceStack Community members: <a href="https://twitter.com/cyberzeddk">Stefan Poulsen</a>, <a href="https://twitter.com/kylehodgson">Kyle Hodgson</a>, <a href="https://twitter.com/RobGibbens">Rob Gibbens</a>, <a href="https://twitter.com/wildturtle21">Sam Abraham</a> and others.
+		Whilst <a href="https://twitter.com/jsonmez">John Sonmez</a> creator of <a href="http://pluralsight.com/training/Courses/TableOfContents/service-stack">ServiceStack's PluralSight course</a> has done a string of Interviews, including <a href="http://thetabletshow.com/?ShowNum=60">The Tablet Show</a> and has ended the year as we started by appearing on <a href="https://twitter.com/shanselman">Scott Hanselman's</a> popular <a href="www.hanselminutes.com/348/more-on-service-stack-with-john-sonmez">hanselminutes</a>.
+	</p>
+
+	<p>
+		With the current momentum behind ServiceStack we've started to see interest from high-profile IT sites like InfoQ who last week published an <a href="http://www.infoq.com/articles/interview-servicestack">in-depth interview with ServiceStack's project lead</a> explaining the differences in technology and philosophy from WCF. Part 2 of the Interview will be published next week on <a href="http://www.infoq.com">InfoQ</a> explaining what a message-based service is, the motivation behind ServiceStack's HTML Story, the state of .NET Open Source and some of the exciting things we have planned for next year.
+	</p>
+
+	<a name="contributors"></a>
+	<h3>Contributors</h3>
+	<p>
+		One of the statistics we're especially proud of is the number of new Open Source contributors we've been able to attract throughout the year, we're even happier that many were first-time contributors to Open Source, doing our best to encourage more .NET developers to participate in OSS.
+		Having lots of contributors are important for ensuring a high quality and value-focused code-base as they provide a tight feedback loop ensuring we only add real-world useful features capable of supporting multiple use-cases that are hardened and tested against different environments.
+	</p>
+	<p>
+		We started the year with <b>35 contributors</b> by mid-year we hit <b>88 contributors</b> and we're now ending the year with an impressive <a href="https://github.com/ServiceStack/ServiceStack/wiki/Contributors">140 Contributors!</a>. As it's rare for a .NET project, the news that we broke <b>100+ Contributors</b> was also <a href="http://www.infoq.com/news/2012/10/service-stack-100-contributors">announced on InfoQ</a>
+	</p>
+
+<div id="chart-contributors" class="chart"></div>
+​
+<script type="text/javascript">
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'chart-contributors',
+                type: 'area'
+            },
+            title: {
+                text: 'Code Contributors in 2012'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%b',
+                    year: '%b'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Contributors'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +'';
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + Highcharts.numberFormat(this.y, 0) +'</b> ' + this.series.name;
+                }
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Contributors',
+                data: [
+                	[Date.UTC(2012, 0, 01), 35], 
+                	[Date.UTC(2012, 7, 01), 88], 
+                	[Date.UTC(2012, 11, 21), 140]
+                ]
+            }]
+        });
+    });
+</script>
+
+
+	<a name="downloads"></a>
+	<h3>NuGet Downloads</h3>
+	<p>
+		Following our slow transition to NuGet we only had <b>10k</b> downloads in January but by mid year we hit our first major download milestone with more than <a href="mono.servicestack.net/100k-downloads/">100k downloads on NuGet</a>. By the end of the year we're happy to report we've doubled that figure again with now more than <b>222k total downloads!</b>
+	</p>
+
+
+<div id="chart-downloads" class="chart"></div>
+​
+<script type="text/javascript">
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'chart-downloads',
+                type: 'area'
+            },
+            title: {
+                text: 'NuGet Downloads in 2012'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%b',
+                    year: '%b'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'NuGet Downloads'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +'';
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + Highcharts.numberFormat(this.y, 0) +'</b> ' + this.series.name;
+                }
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'NuGet Downloads',
+                data: [
+                	[Date.UTC(2012, 0, 01), 10000], 
+                	[Date.UTC(2012, 7, 01), 100000], 
+                	[Date.UTC(2012, 11, 21), 222000]
+                ]
+            }]
+        });
+    });
+</script>
+
+
+<a name="community"></a>
+<h2>ServiceStack Community</h2>
+
+<h3>GitHub Watchers</h3>
+<p>
+	Along with downloads we've also increased the size of our community having more than doubled the number of watchers on GitHub which has seen us move from the <b>13th</b> most watched C#/.NET project on GitHub at the start of the year to our current standing as the <b>6th</b> <a href="github.com/languages/C%23/most_watched">most watched C#/.NET project on GitHub</a>
+</p>	
+
+<div id="chart-watchers" class="chart"></div>
+​
+<script type="text/javascript">
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'chart-watchers',
+                type: 'area'
+            },
+            title: {
+                text: 'GitHub Watchers in 2012'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%b',
+                    year: '%b'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'GitHub Watchers'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +'';
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + Highcharts.numberFormat(this.y, 0) +'</b> ' + this.series.name;
+                }
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'GitHub Watchers',
+                data: [
+                	[Date.UTC(2012, 0, 01), 500], 
+                	[Date.UTC(2012, 7, 01), 818], 
+                	[Date.UTC(2012, 11, 21), 1172]
+                ]
+            }]
+        });
+    });
+</script>
+
+
+<h3>Twitter Followers</h3>
+<p>
+	Our notifier of real-time news and <a href="https://twitter.com/ServiceStack/favorites">recorder of User feedback</a>, the <a href="https://twitter.com/servicestack">@ServiceStack</a> twitter account has also seen a sizable increase in followers, recently breaking 1k followers and sitting now with <b>1160</b> followers:
+</p>	
+
+<div id="chart-followers" class="chart"></div>
+​
+<script type="text/javascript">
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'chart-followers',
+                type: 'area'
+            },
+            title: {
+                text: 'Twitter Followers in 2012'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%b',
+                    year: '%b'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Twitter Followers'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +'';
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + Highcharts.numberFormat(this.y, 0) +'</b> ' + this.series.name;
+                }
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Twitter Followers',
+                data: [
+                	[Date.UTC(2012, 0, 01), 319], 
+                	[Date.UTC(2012, 7, 01), 720], 
+                	[Date.UTC(2012, 11, 21), 1058]
+                ]
+            }]
+        });
+    });
+</script>
+
+<p>
+	Beyond GitHub and Twitter we've created a new <a href="https://plus.google.com/u/0/communities/112445368900682590445">ServiceStack G+ Community</a> which has added more than <b>202</b> members in just the last 10 days.
+</p>
+
+<a name="knowledgebase"></a>
+<h2>Knowledge-base</h2>
+
+<h3>Questions on StackOverflow</h3>
+<p>
+	Other than our <a href="http://github.com/ServiceStack/ServiceStack/wiki">comprehensive wiki documentation</a>, another great place to maintain a growing knowledge-base is on StackOverflow since you can get direct answers to real world problems. We're happy to see this number more than double from <b>356</b> questions grow to <b>740</b> questions in the last 6 months.
+</p>	
+
+
+<div id="chart-questions" class="chart"></div>
+​
+<script type="text/javascript">
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'chart-questions',
+                type: 'area'
+            },
+            title: {
+                text: 'StackOverflow Questions in 2012'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    month: '%b',
+                    year: '%b'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'StackOverflow Questions'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +'';
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + Highcharts.numberFormat(this.y, 0) +'</b> ' + this.series.name;
+                }
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        enabled: false,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'StackOverflow Questions',
+                data: [
+                	[Date.UTC(2012, 7, 01), 356], 
+                	[Date.UTC(2012, 11, 21), 740]
+                ]
+            },{
+                name: 'Pluralsight votes',
+                data: [
+                	[Date.UTC(2012, 7, 01), 166], 
+                	[Date.UTC(2012, 11, 21), 262]
+                ]
+            }]
+        });
+    });
+</script>
+
+<p>
+	We also saw an increased interest from the wider .NET community seeking a Pluralsight video on ServiceStack. 
+	This call was answered by <a href="https://twitter.com/jsonmez">John Sonmez</a> who created a <a href="http://pluralsight.com/training/Courses/TableOfContents/service-stack">comprehensive 5h 27m ServiceStack Pluralsight course</a> that quickly shot to <a href="https://twitter.com/jsonmez/status/280312971509518336">@pluralsight top 10</a>.
+</p>
+
+<h3>3rd Party Resources</h3>
+<p>
+	Our <a href="https://github.com/ServiceStack/ServiceStack/wiki/Community-Resources">3rd Party Community Resources</a> section has also seen many new additions of Blog posts, Articles, Community projects, Examples, demos and more in this last year.
+</p>
+
+<h2>2013 and beyond...</h2>
+<p>
+	Although 2012 was our best year yet, we're planning on making 2013 even better with plenty of exciting releases and news announcements planned for next year. Watch this space!
+</p>
+
+</div>
+
+
+<span class="r"></span>
+<div id="footer">
+	Copyright &copy; 2012 ServiceStack. All rights reserved.
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7722718-7");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
